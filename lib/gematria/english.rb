@@ -6,14 +6,34 @@ module Gematria
       s: 100, t: 200, u: 300, v: 400, w: 500, x: 600, y: 700, z: 800
     }
 
+    # Gets an array of the values for each
+    # character of text.
+    #
+    #   name = Gematria::English.new("Adam")
+    #   name.mapped # => [1, 4, 1, 40]
     def mapped
       text.each_char.map { |c| lookup_char c }
     end
 
+    # Gets the summed gematria number of text.
+    #
+    #   name = Gematria::English.new("Adam")
+    #   name.converted # => 46
+    #
+    # This uses <tt>mapped</tt> internally and sums
+    # the results.
     def converted
       mapped.inject(:+)
     end
 
+    # Recursively reduces the converted value to a
+    # single digit mispar katan mispari style.
+    #
+    #   name = Gematria::English.new("Adam")
+    #   name.reduced # => 1
+    #
+    # For example: "Adam" -> 46 -> 10 -> 1
+    # Delegates to a private function that handles the recursion
     def reduced
       do_reduction_on converted
     end
