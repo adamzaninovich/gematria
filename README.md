@@ -8,6 +8,10 @@ The current correspondence table is as follows:
      j:10   k:20   l:30   m:40   n:50   o:60   p:70   q:80   r:90
      s:100  t:200  u:300  v:400  w:500  x:600  y:700  z:800
 
+## Documentation
+
+Documentation at [rubydoc.info](http://rubydoc.info/github/adamzaninovich/gematria).
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -38,7 +42,7 @@ Or install it yourself as:
 
 ## Contributing
 
-Please submit specs with your feature!
+Please submit documentation and specs with your feature.
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
