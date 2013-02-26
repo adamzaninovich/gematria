@@ -1,6 +1,2 @@
 require 'rspec'
 require 'gematria'
-
-RSpec.configure do |config|
-	config.color_enabled = true
-end
