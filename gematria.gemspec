@@ -8,7 +8,7 @@ Gem::Specification.new do |gem|
   gem.version       = Gematria::VERSION
   gem.authors       = ["Adam Zaninovich"]
   gem.email         = ["adam.zaninovich@gmail.com"]
-  gem.description   = %q{A Ruby gem that calculates Gematria. This version supports English text and uses a mispar hechrachi style correspondence table, but in future versions there may be support for more languages as well as user configurable correspondence tables. The gem supports raw conversion to number (by simple summation), mapping (breakdown of individual numbers), and reduction to a single digit (mispar katan mispari).}
+  gem.description   = %q{A Ruby gem that calculates Gematria. The gem comes with built-in correspondence tables for English and Hebrew text, but allows for user-configurable tables. The gem supports raw conversion to number (by simple summation), mapping (breakdown of individual numbers), and reduction to a single digit (mispar katan mispari).}
   gem.summary       = %q{A Ruby gem that calculates Gematria}
   gem.homepage      = "http://github.com/adamzaninovich/gematria"
 

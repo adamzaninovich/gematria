@@ -1,12 +1,18 @@
 # Gematria (גימטריא) [![Build Status](https://travis-ci.org/adamzaninovich/gematria.png?branch=master)](https://travis-ci.org/adamzaninovich/gematria)
 
-A Ruby gem that calculates Gematria. This version supports English text and uses a mispar hechrachi style correspondence table, but in future versions there may be support for more languages as well as user configurable correspondence tables. The gem supports raw conversion to number (by simple summation), mapping (breakdown of individual numbers), and reduction to a single digit (mispar katan mispari).
+A Ruby gem that calculates Gematria. The gem comes with built-in correspondence tables for English and Hebrew text, but allows for user-configurable tables. The gem supports raw conversion to number (by simple summation), mapping (breakdown of individual numbers), and reduction to a single digit (mispar katan mispari).
 
-The current correspondence table is as follows:
+The included correspondence tables are as follows:
 
+    English ("mispar hechrachi" method applied to English alphabet):
     a:1    b:2    c:3    d:4    e:5    f:6    g:7    h:8    i:9
     j:10   k:20   l:30   m:40   n:50   o:60   p:70   q:80   r:90
     s:100  t:200  u:300  v:400  w:500  x:600  y:700  z:800
+
+    Hebrew (Mispar gadol style):
+    א:1			ב:2			ג:3			ד:4			ה:5			ו:6			ז:7			ח:8			ט:9
+    י:10			כ:20		ל:30		מ:40		נ:50			ס:60		ע:70		פ:80		צ:90
+    ק:100		ר:200		ש:300		ת:400		ך:500		ם:600		ן:700		ף:800		ץ:900
 
 ## Documentation
 
@@ -28,17 +34,29 @@ Or install it yourself as:
 
 ## Usage
 
-    name = Gematria::English.new("Adam")
+    name = Gematria::Calculator.new("Adam", :english)
     name.converted          # => 46
     name.mapped.join(" + ") # => "1 + 4 + 1 + 40"
     name.reduced            # => 1
 
-    gematria = Gematria::English.new("Gematria is fun!")
+    gematria = Gematria::Calculator.new("Gematria is fun!", english)
     gematria.converted      # => 818
     gematria.mapped         # => [7, 5, 40, 1, 200, 90, 9, 1, 0, 9, 100, 0, 6, 300, 50, 0]
 
-    alphabet = Gematria::English.new("abcdefghijklmnopqrstuvwxyz")
-    alphabet.converted == 4095 # => true
+    alephbet = Gematria::Calculator.new('אבגדהוזחטיכלמנסעפצקרשתךםןףץ', :hebrew)
+    alephbet.converted == 4995 # => true
+
+    # defining a custom table
+
+    Gematria::Tables.add_table :mini, 'a' => 1, 'b' => 10, 'c' => 100
+    abcd = Gematria::Calculator.new('abcd', :mini)
+    abcd.mapped    # => [1,10,100,0]
+    abcd.converted # => 111
+    abcd.reduced   # => 3
+
+## Issues
+
+If you find any issues or errors with this gem, please report them on [Github Issues](http://github.com/adamzaninovich/gematria/issues).
 
 ## Contributing
 

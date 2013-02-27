@@ -1,11 +1,16 @@
+# -*- encoding : utf-8 -*-
 module Gematria
-  class English < Struct.new(:text)
-    # applies "mispar hechrachi" method to English alphabet (http://www.inner.org/gematria/fourways.php)
-    CORRESPONDENCE_TABLE = {
-      :a => 1,   :b => 2,   :c => 3,   :d => 4,   :e => 5,   :f => 6,   :g => 7,   :h => 8,   :i => 9,
-      :j => 10,  :k => 20,  :l => 30,  :m => 40,  :n => 50,  :o => 60,  :p => 70,  :q => 80,  :r => 90,
-      :s => 100, :t => 200, :u => 300, :v => 400, :w => 500, :x => 600, :y => 700, :z => 800
-    }
+  class Calculator
+    
+    attr_reader :text, :table
+    def initialize(text, table_name=nil)
+      @text = text
+      if table_name.is_a? Symbol
+        @table = Tables.fetch(table_name)
+      else
+        @table = {}
+      end
+    end
 
     # Gets an array of the values for each character of text.
     #
@@ -40,8 +45,9 @@ module Gematria
     end
 
     private
+    
     def lookup_char(char)
-      CORRESPONDENCE_TABLE.fetch(char.downcase.to_sym, 0)
+      table.fetch(char.downcase, 0)
     end
 
     def do_reduction_on(number)

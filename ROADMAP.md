@@ -2,10 +2,8 @@
 
 ## Near future
 
-* Make correspondence table into its own object
-* Investigate feasability and worth of supporting Hebrew gematria
+* Ability to configure global default table so as to not have to specify a table name with every new instance
 
 ## Far future
 
-* Pluggable/Configurable correspondence tables
-* Pluggable languages (DSL for new languages?)
+* Nothing for now. [Suggestions](http://github.com/adamzaninovich/gematria/issues) are welcome and encouraged.
