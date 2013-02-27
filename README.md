@@ -38,7 +38,7 @@ Or install it yourself as:
     alephbet = Gematria::Calculator.new('אבגדהוזחטיכלמנסעפצקרשתךםןףץ', :hebrew)
     alephbet.converted == 4995 # => true
 
-    # defining a custom table
+Defining a custom table
 
     Gematria::Tables.add_table :mini, 'a' => 1, 'b' => 10, 'c' => 100
     abcd = Gematria::Calculator.new('abcd', :mini)
