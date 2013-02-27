@@ -35,7 +35,7 @@ Or install it yourself as:
     gematria.converted      # => 818
     gematria.mapped         # => [7, 5, 40, 1, 200, 90, 9, 1, 0, 9, 100, 0, 6, 300, 50, 0]
 
-Settings a global table
+Setting a global table
 
     Gematria::Tables.set_table :hebrew
     alephbet = Gematria::Calculator.new 'אבגדהוזחטיכלמנסעפצקרשתךםןףץ'
