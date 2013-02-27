@@ -1,12 +1,12 @@
-# Gematria [![Build Status](https://travis-ci.org/adamzaninovich/gematria.png?branch=master)](https://travis-ci.org/adamzaninovich/gematria)
+# Gematria (אירטמיג) [![Build Status](https://travis-ci.org/adamzaninovich/gematria.png?branch=master)](https://travis-ci.org/adamzaninovich/gematria)
 
 A Ruby gem that calculates Gematria. This version supports English text and uses a mispar hechrachi style correspondence table, but in future versions there may be support for more languages as well as user configurable correspondence tables. The gem supports raw conversion to number (by simple summation), mapping (breakdown of individual numbers), and reduction to a single digit (mispar katan mispari).
 
 The current correspondence table is as follows:
 
-     a:1    b:2    c:3    d:4    e:5    f:6    g:7    h:8    i:9
-     j:10   k:20   l:30   m:40   n:50   o:60   p:70   q:80   r:90
-     s:100  t:200  u:300  v:400  w:500  x:600  y:700  z:800
+    a:1    b:2    c:3    d:4    e:5    f:6    g:7    h:8    i:9
+    j:10   k:20   l:30   m:40   n:50   o:60   p:70   q:80   r:90
+    s:100  t:200  u:300  v:400  w:500  x:600  y:700  z:800
 
 ## Documentation
 
