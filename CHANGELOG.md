@@ -1,20 +1,8 @@
-## v0.0.4 (far future)
-
-### Todo
-
-* Pluggable/Configurable correspondence tables
-* Pluggable languages (DSL for new languages?)
-
-## v0.0.3 (near future)
-
-### Todo
-
-* Make correspondence table into its own object
-* Investigate feasability and worth of supporting Hebrew gematria
+# Changelog
 
 ## v0.0.2
 
-* Ruby 1.8.7 compatible
+* Ruby 1.8.7 compatible (Now compatible with 1.8.7 - head)
 
 ## v0.0.1
 
