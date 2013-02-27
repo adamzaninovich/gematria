@@ -10,7 +10,7 @@ describe Gematria::Tables do
 		context "when table is valid" do
 			it "adds the table to the TABLES store" do
 				Gematria::Tables.add_table :valid, 'a'=>1,'b'=>2
-				expect(Gematria::Tables::TABLES).to include :valid=>{'a'=>1,'b'=>2}
+				expect(Gematria::Tables::TABLES).to include valid: {'a'=>1,'b'=>2}
 			end
 		end
 		context "when table is invalid" do

@@ -2,6 +2,7 @@
 
 ## v0.0.3
 
+* Removes support for 1.8.7 (due to encoding problems with Hebrew) (Now compatible with 1.9.2 - head)
 * Adds Hebrew to built-in tables (now includes English and Hebrew)
 * Adds support for custom tables
 * Requires specifying a table when instantiating

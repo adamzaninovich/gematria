@@ -30,7 +30,12 @@ module Gematria
       TABLES.fetch(key)
     end
 
-    # (see #fetch)
+    # Fetches specified table (delegates to #fetch)
+    #
+    #     Tables[:mini_english] # => {'a'=>1,'b'=>2,'c'=>3}
+    #
+    # @param key [Symbol] table name as a Symbol
+    # @return [Hash{String => Number}]
     def [](key)
       fetch(key)
     end
