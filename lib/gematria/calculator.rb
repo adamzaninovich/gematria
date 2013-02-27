@@ -8,7 +8,7 @@ module Gematria
       if table_name.is_a? Symbol
         @table = Tables.fetch(table_name)
       else
-        @table = {}
+        @table = Tables.current
       end
     end
 

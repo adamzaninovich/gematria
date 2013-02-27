@@ -1,9 +1,29 @@
 # -*- encoding : utf-8 -*-
 module Gematria
   module Tables
+    # Stores available tables
     TABLES = {}
 
-    module_function
+    # Sets the global current table
+    #
+    #     Tables.set_table(:english)
+    #     Tables.current # => {'a'=>1,'b'=>2,...}
+    #
+    # @param table_name [Symbol] table name
+    # @return [Symbol] table name
+    def self.set_table(table_name)
+      @current = table_name
+    end
+
+    # Gets the currently selected table
+    #
+    #     Tables.set_table(:english)
+    #     Tables.current # => {'a'=>1,'b'=>2,...}
+    #
+    # @return [Hash{String => Number}]
+    def self.current
+      fetch(@current)
+    end
 
     # Adds a table to the table store. A valid table must be a Hash with single character string keys and numerical values. 
     # A table that is not a Hash will raise a TypeError. The table name will be converted to a Symbol.
@@ -12,7 +32,7 @@ module Gematria
     #
     # @param name [#to_sym] table name
     # @param table [Hash{String => Number}] table of characters pointing to corresponding values
-    def add_table(name, table)
+    def self.add_table(name, table)
       if table.is_a? Hash
         TABLES[name.to_sym] = table
       else
@@ -26,8 +46,8 @@ module Gematria
     #
     # @param key [Symbol] table name as a Symbol
     # @return [Hash{String => Number}]
-    def fetch(key)
-      TABLES.fetch(key)
+    def self.fetch(key)
+      TABLES.fetch(key, {})
     end
 
     # Fetches specified table (delegates to #fetch)
@@ -36,7 +56,7 @@ module Gematria
     #
     # @param key [Symbol] table name as a Symbol
     # @return [Hash{String => Number}]
-    def [](key)
+    def self.[](key)
       fetch(key)
     end
 
