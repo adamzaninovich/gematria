@@ -26,22 +26,25 @@ Or install it yourself as:
 
 ## Usage
 
-    name = Gematria::Calculator.new("Adam", :english)
+    name = Gematria::Calculator.new "Adam", :english
     name.converted          # => 46
     name.mapped.join(" + ") # => "1 + 4 + 1 + 40"
     name.reduced            # => 1
 
-    gematria = Gematria::Calculator.new("Gematria is fun!", english)
+    gematria = Gematria::Calculator.new "Gematria is fun!", :english
     gematria.converted      # => 818
     gematria.mapped         # => [7, 5, 40, 1, 200, 90, 9, 1, 0, 9, 100, 0, 6, 300, 50, 0]
 
-    alephbet = Gematria::Calculator.new('אבגדהוזחטיכלמנסעפצקרשתךםןףץ', :hebrew)
+Settings a global table
+
+    Gematria::Tables.set_table :hebrew
+    alephbet = Gematria::Calculator.new 'אבגדהוזחטיכלמנסעפצקרשתךםןףץ'
     alephbet.converted == 4995 # => true
 
 Defining a custom table
 
     Gematria::Tables.add_table :mini, 'a' => 1, 'b' => 10, 'c' => 100
-    abcd = Gematria::Calculator.new('abcd', :mini)
+    abcd = Gematria::Calculator.new 'abcd', :mini
     abcd.mapped    # => [1,10,100,0]
     abcd.converted # => 111
     abcd.reduced   # => 3
