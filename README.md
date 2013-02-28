@@ -49,7 +49,9 @@ Defining a custom table
     abcd.converted # => 111
     abcd.reduced   # => 3
 
-## Issues
+## Known Issues
+
+* Not compatible with Ruby 1.8.7 or below. (If you need 1.8.7, use v0.0.2)
 
 If you find any issues or errors with this gem, please report them on [Github Issues](http://github.com/adamzaninovich/gematria/issues).
 
