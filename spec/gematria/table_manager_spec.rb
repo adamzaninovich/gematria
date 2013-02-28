@@ -2,10 +2,10 @@
 require 'spec_helper'
 
 module Gematria
+	describe TableManager do
 
-	describe Tables do
 		it "has a hash to store the tables" do
-			expect(Tables::TABLES).to be_a Hash
+			expect(Tables.tables).to be_a Hash
 		end
 
 		describe "#set_table" do
@@ -38,7 +38,7 @@ module Gematria
 			context "when table is valid" do
 				it "adds the table to the TABLES store" do
 					Tables.add_table :valid, 'a'=>1,'b'=>2
-					expect(Tables::TABLES).to include valid: {'a'=>1,'b'=>2}
+					expect(Tables.tables).to include valid: {'a'=>1,'b'=>2}
 				end
 			end
 			context "when table is invalid" do
@@ -50,27 +50,21 @@ module Gematria
 			end
 		end
 
-		describe "#fetch" do
-			context "when table exists" do
-				it "returns the table" do
-					Tables.add_table :mytable, 'a'=>1
-					expect(Tables.fetch(:mytable)).to eq 'a'=>1
+		%w{fetch []}.each do |method_name|
+			describe "##{method_name}" do
+				context "when table exists" do
+					it "returns the table" do
+						Tables.add_table :mytable, 'a'=>1
+						expect(Tables.send method_name, :mytable).to eq 'a'=>1
+					end
 				end
-			end
-			context "when table does not exist" do
-				it "returns an empty hash" do
-					expect(Tables.fetch :non_existant_table).to eq({})
+				context "when table does not exist" do
+					it "returns an empty hash" do
+						expect(Tables.send method_name, :non_existant_table).to eq({})
+					end
 				end
-			end
-		end
-
-		describe "#[]" do
-			it "delegates to #fetch" do
-				Tables.should_receive(:fetch).with(:key)
-				Tables[:key]
 			end
 		end
 
 	end
-
 end

@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.0.5
+
+* Improved documentation
+* `Gematria::Tables` is now an instance of `Gematria::TableManager` rather than a method bucket
+
 ## v0.0.4
 
 * Ability to set global table so as to not have to specify a table name with every new instance

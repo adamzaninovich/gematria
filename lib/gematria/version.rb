@@ -1,4 +1,5 @@
 # -*- encoding : utf-8 -*-
 module Gematria
-  VERSION = "0.0.4"
+	# Official version of gematria gem
+  VERSION = "0.0.5"
 end

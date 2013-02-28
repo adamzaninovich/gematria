@@ -1,9 +1,13 @@
 # -*- encoding : utf-8 -*-
 require "gematria/version"
-require "gematria/tables"
+require "gematria/table_manager"
 require "gematria/calculator"
 
+# A Ruby gem that calculates Gematria
 module Gematria
+  # initialize TableManager
+  Tables = TableManager.new
+
   # Add built-in tables
 
   # applies "mispar hechrachi" method to English alphabet (http://www.inner.org/gematria/fourways.php)
