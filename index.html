@@ -11,14 +11,20 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <script src="http://d2z0ci02gkl14o.cloudfront.net/assets/js/jquery-1.7.2.min.js"></script>
+    <script src="http://d2z0ci02gkl14o.cloudfront.net/assets/js/lightbox.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://d2z0ci02gkl14o.cloudfront.net/assets/stylesheets/lightbox.css">
   </head>
   <body>
     <div class="wrapper">
       <header>
         <h1>Gematria (גימטריא)</h1>
         <p>A Ruby gem that calculates Gematria</p>
-        <p><a href="https://travis-ci.org/adamzaninovich/gematria"><img src="https://travis-ci.org/adamzaninovich/gematria.png?branch=master" alt="Build Status"></a></p>
         <p class="view"><a href="https://github.com/adamzaninovich/gematria">View the Project on GitHub <small>adamzaninovich/gematria</small></a></p>
+        <p class="view"><a href="https://rubygems.org/gems/gematria">Download the Gem on RubyGems <small>gems/gematria</small></a></p>
+        <p class="view"><a href="http://rubydoc.info/github/adamzaninovich/gematria">Read the Documentation on RubyDoc <small>github/adamzaninovich/gematria</small></a></p>
+        <p class="view"><a href="https://travis-ci.org/adamzaninovich/gematria">Check the latest Build Status on Travis CI <small>adamzaninovich/gematria</small></a></p>
+        <p><a href="https://travis-ci.org/adamzaninovich/gematria"><img src="https://travis-ci.org/adamzaninovich/gematria.png?branch=master" alt="Build Status"></a></p>
         <ul>
           <li><a href="https://github.com/adamzaninovich/gematria/zipball/master">Download <strong>ZIP File</strong></a></li>
           <li><a href="https://github.com/adamzaninovich/gematria/tarball/master">Download <strong>TAR Ball</strong></a></li>
@@ -32,11 +38,7 @@
 
 <p>The included correspondence tables are as follows:</p>
 
-<p><img src="https://dl.dropbox.com/u/2436753/github/gematria/correspondence_tables.png" alt="Correspondence Tables"></p>
-
-<h2>Documentation</h2>
-
-<p>Documentation at <a href="http://rubydoc.info/github/adamzaninovich/gematria">rubydoc.info</a>.</p>
+<p><a href="https://dl.dropbox.com/u/2436753/github/gematria/correspondence_tables.png" rel="lightbox"><img src="https://dl.dropbox.com/u/2436753/github/gematria/correspondence_tables.png" alt="Correspondence Tables"></a></p>
 
 <h2>Installation</h2>
 
@@ -57,10 +59,10 @@
 
 <h2>Usage</h2>
 
-<pre><code>name = Gematria::Calculator.new "Adam", :english
-name.converted          # =&gt; 46
-name.mapped.join(" + ") # =&gt; "1 + 4 + 1 + 40"
-name.reduced            # =&gt; 1
+<pre><code>chai = Gematria::Calculator.new "הי", :hebrew
+chai.converted          # =&gt; 18
+chai.mapped.join(" + ") # =&gt; "8 + 10"
+chai.reduced            # =&gt; 9
 
 gematria = Gematria::Calculator.new "Gematria is fun!", :english
 gematria.converted      # =&gt; 818
@@ -84,10 +86,10 @@ abcd.reduced   # =&gt; 3
 </code></pre>
 
 <h2>Known Issues</h2>
-
+<p>If you find any issues or errors with this gem, please report them on <a href="http://github.com/adamzaninovich/gematria/issues">Github Issues</a>.</p>
 <ul>
 <li>Not compatible with Ruby 1.8.7 or below. (If you need 1.8.7, use <a href="https://github.com/adamzaninovich/gematria/tree/v0.0.2">v0.0.2</a>)</li>
-</ul><p>If you find any issues or errors with this gem, please report them on <a href="http://github.com/adamzaninovich/gematria/issues">Github Issues</a>.</p>
+</ul>
 
 <h2>Contributing</h2>
 
@@ -126,7 +128,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/adamzaninovich">adamzaninovich</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+        <p><small>Hosted on GitHub Pages &mdash; Design by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
