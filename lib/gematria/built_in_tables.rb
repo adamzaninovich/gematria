@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module Gematria
   BUILT_IN_TABLES = {
     # applies "mispar hechrachi" method to English alphabet (http://www.inner.org/gematria/fourways.php)
