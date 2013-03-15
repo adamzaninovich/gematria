@@ -1,10 +1,15 @@
 # Gematria (גימטריא) [![Build Status](https://travis-ci.org/adamzaninovich/gematria.png?branch=master)](https://travis-ci.org/adamzaninovich/gematria)
 
-A Ruby gem that calculates Gematria. The gem comes with built-in correspondence tables for English and Hebrew text, but allows for user-configurable tables. The gem supports raw conversion to number (by simple summation), mapping (breakdown of individual numbers), and reduction to a single digit (mispar katan mispari).
+A Ruby gem that calculates Gematria. The gem comes with a few built-in correspondence tables, but allows for user-configurable tables. The gem supports raw conversion to number (by simple summation), mapping (breakdown of individual numbers), and reduction to a single digit (mispar katan mispari).
+
+See the [website](http://adamzaninovich.github.com/gematria) for more detailed information.
 
 The included correspondence tables are as follows:
 
-![Correspondence Tables](https://dl.dropbox.com/u/2436753/github/gematria/correspondence_tables.png)
+![Hebrew Correspondence Table](http://adamzaninovich.github.com/gematria/images/hebrew.png)
+![Greek Correspondence Table](http://adamzaninovich.github.com/gematria/images/greek.png)
+![English Correspondence Table](http://adamzaninovich.github.com/gematria/images/english.png)
+![English ALW Correspondence Table](http://adamzaninovich.github.com/gematria/images/alw.png)
 
 ## Documentation
 
