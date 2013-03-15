@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    gematria (0.0.5)
+    gematria (0.0.6)
 
 GEM
   remote: https://rubygems.org/
