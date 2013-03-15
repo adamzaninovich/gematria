@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.0.6
+
+* Adds Greek and alternate English (ALW cipher) to built-in tables
+
 ## v0.0.5
 
 * Improved documentation
